@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.JS.completesong"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="22" />
+     <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name=".SongMainActivity"
+            android:label="@string/title_activity_song_main" >
+        </activity>
+        <activity
+            android:name=".PageViewFirstActivity"
+            android:label="@string/title_activity_page_view_first" >
+        </activity>
+        <activity
+            android:name=".FragmentVIewPageActivity"
+            android:label="@string/title_activity_fragment_view_page" >
+        </activity>
+        
+
+        <service android:name="com.JS.Service.MediaPlaySerives" >
+ 		 </service>
+	  
+    </application>
+
+</manifest>

@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_song_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zhuyilong5"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.JS.completesong.SongMainActivity" >
+
+    <TextView
+        android:id="@+id/song_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/song_content"
+        android:layout_marginRight="18dp"
+        android:layout_weight="1.5"
+        android:text="用户"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/welcom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1.5"
+        android:text="欢迎回来"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:id="@+id/song_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar"
+        android:layout_centerInParent="true" >
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/songMain_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:textColor="#00FF00" >
+
+        <RadioButton
+            android:id="@+id/local_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:button="@null"
+            android:text="本地音乐"
+            android:textColor="#00FF00"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/like_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:button="@null"
+            android:text="我的喜欢"
+            android:textColor="#00FF00"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/network_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:button="@null"
+            android:text="网络音乐"
+            android:textColor="#00FF00"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_weight="2"
+            android:button="@null"
+            android:text="个人中心"
+            android:textColor="#00FF00"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/song_mainfragmen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/song_username"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="50dp"
+        android:layout_marginBottom="36dp"
+        android:layout_weight="1.5"
+        android:text="当前面板"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/song_next" />
+
+    <ImageButton
+        android:id="@+id/song_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/song_username"
+        android:layout_below="@+id/song_username"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/ic_right" />
+
+    <ImageButton
+        android:id="@+id/song_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcom"
+        android:layout_below="@+id/welcom"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/ic_left" />
+
+    <ImageButton
+        android:id="@+id/song_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekbar"
+        android:layout_marginStart="50dp"
+        android:layout_toLeftOf="@+id/song_next"
+        android:layout_toStartOf="@id/song_pre"
+        android:src="@drawable/ic_play" />
+
+</RelativeLayout>
